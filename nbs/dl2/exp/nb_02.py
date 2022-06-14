@@ -7,7 +7,9 @@
 from exp.nb_01 import *
 
 def get_data():
-    path = datasets.download_data(MNIST_URL, ext='.gz')
+    # I removed below and add the direct path from my computer.
+    #path = datasets.download_data(MNIST_URL, ext='.gz')
+    path = Path()/'mnist.pkl.gz'
     with gzip.open(path, 'rb') as f:
         ((x_train, y_train), (x_valid, y_valid), _) = pickle.load(f, encoding='latin-1')
     return map(tensor, (x_train,y_train,x_valid,y_valid))
