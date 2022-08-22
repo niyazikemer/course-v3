@@ -4,4 +4,4 @@
 #################################################
 # file to edit: dev_nb/00_exports.ipynb
 
-TEST = 'test'
+TEST = 'test1'
